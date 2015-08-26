@@ -1,0 +1,50 @@
+<%= form_for(@request) do |f| %>
+  <% if @request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
+      <ul>
+      <% @request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Telephone %><br>
+    <%= f.number_field :Telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :Age %><br>
+    <%= f.number_field :Age %>
+  </div>
+  <div class="field">
+    <%= f.label :Location_From %><br>
+    <%= f.select :Location_From, [ 'Cairo','Alex','Mansoura','Tanta','Aswan','SharmElSheikh','Gouna','Hurghada','Sukhna' ] %>
+  </div>
+  <div class="field">
+    <%= f.label :Location_Destination %><br>
+    <%= f.select :Location_Destination, [ 'Cairo','Alex','Mansoura','Tanta','Aswan','SharmElSheikh','Gouna','Hurghada','Sukhna' ] %>
+  </div>
+  <div class="field">
+    <%= f.label :Travel_date %><br>
+    <%= f.date_select :Travel_date %> 
+  </div>
+  <div class="field">
+    <%= f.label :prefered_time_from %><br>
+    <%= f.time_select :prefered_time_from,{ampm: true} %> to <%= f.time_select :prefered_time_to,{ampm: true} %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Notes %><br>
+    <%= f.text_area :Notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

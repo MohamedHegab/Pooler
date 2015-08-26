@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.Name %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @request.Telephone %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @request.Age %>
+</p>
+
+<p>
+  <strong>Location from:</strong>
+  <%= @request.Location_From %>
+</p>
+
+<p>
+  <strong>Location destination:</strong>
+  <%= @request.Location_Destination %>
+</p>
+
+<p>
+  <strong>Travel date:</strong>
+  <%= @request.Travel_date %>
+</p>
+
+<p>
+  <strong>Prefered time from:</strong>
+  <%= @request.prefered_time_from %>
+</p>
+
+<p>
+  <strong>Prefered time to:</strong>
+  <%= @request.prefered_time_to %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @request.Notes %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @request.zone %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

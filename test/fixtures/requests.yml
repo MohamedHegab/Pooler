@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Telephone: 1
+  Age: 1
+  Location_From: MyString
+  Location_Destination: MyString
+  Travel_date: 2015-08-25
+  prefered_time_from: 2015-08-25 22:38:55
+  prefered_time_to: 2015-08-25 22:38:55
+  Notes: 
+
+two:
+  Name: MyString
+  Telephone: 1
+  Age: 1
+  Location_From: MyString
+  Location_Destination: MyString
+  Travel_date: 2015-08-25
+  prefered_time_from: 2015-08-25 22:38:55
+  prefered_time_to: 2015-08-25 22:38:55
+  Notes: 
