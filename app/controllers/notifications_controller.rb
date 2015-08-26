@@ -53,6 +53,7 @@ class NotificationsController < ApplicationController
 
   # DELETE /notifications/1
   # DELETE /notifications/1.json
+  
   def destroy
     @notification.destroy
     respond_to do |format|

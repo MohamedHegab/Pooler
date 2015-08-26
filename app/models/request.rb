@@ -25,9 +25,8 @@ class Request < ActiveRecord::Base
     @requests.each_index do |x|
       if(Request.where(Location_From: @requests[x].Location_From,Location_Destination: @requests[x].Location_Destination,Travel_date: @requests[x].Travel_date,notification_id: nil).count >= 3 )
         @noti = Notification.create(source: @requests[x].Location_From,destination: @requests[x].Location_Destination, date: @requests[x].Travel_date)
-        var = Request.where(Location_From: @requests[x].Location_From,Location_Destination: @requests[x].Location_Destination,Travel_date: @requests[x].Travel_date,notification_id: nil).pluck(:id)
-        @requests[0].notification_id = @noti.id
-        @requests[0].save
+		Request.where(Location_From: @requests[x].Location_From,Location_Destination: @requests[x].Location_Destination,Travel_date: @requests[x].Travel_date,notification_id: nil).update_all(notification_id: @noti.id)
+        
       end
     end
   end

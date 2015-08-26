@@ -1,22 +1,16 @@
 <%= form_for(@notification) do |f| %>
-  <% if @notification.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@notification.errors.count, "error") %> prohibited this notification from being saved:</h2>
-
-      <ul>
-      <% @notification.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  
 
   <div class="actions">
     <div class="field">
-      <%= f.label :source %><br>
-      <%= f.text_field :source %>
+      <%= f.label "Name" %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label "Telephone" %><br>
+      <%= f.text_field :tele %>
     </div>
     
-      <%= f.submit 'submit' %>
-    </div>
+    <%= f.submit 'submit' %>
+  </div>
 <% end %>
