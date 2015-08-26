@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @notification.source %> to <%= @notification.destination %> Trip</h1>
+
+<p>There’s enough requests to process a new trip from
+<%= @notification.source %> to: <%= @notification.destination %> Please, confirm with: your Name and Telephone<p>
+
+<%= render 'form' %>
+
+
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+<%= link_to 'Back', notifications_path %>

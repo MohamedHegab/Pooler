@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825233321) do
+ActiveRecord::Schema.define(version: 20150826103810) do
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "source"
+    t.string   "destination"
+    t.date     "date"
+    t.text     "title"
+    t.text     "message"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string   "Name"
@@ -26,6 +36,10 @@ ActiveRecord::Schema.define(version: 20150825233321) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "zone"
+    t.integer  "notifications_id"
+    t.integer  "notification_id"
   end
+
+  add_index "requests", ["notification_id"], name: "index_requests_on_notification_id"
 
 end

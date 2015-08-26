@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Notifications</h1>
+
+<% @notifications.each do |notification| %>
+
+<%= link_to(notification) do %>
+  <h3> New <%= notification.source %> to <%= notification.destination %> Trip</h3>
+<% end %>
+
+<% end %>
+
+<%= link_to 'Back to Requests', requests_path %>
