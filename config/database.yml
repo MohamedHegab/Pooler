@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  password: 654321
+  socket: /var/run/mysqld/mysqld.sock
+  database: pooler_production
+  username: pooler
+  password: <%= ENV['secret_key_base'] %>
