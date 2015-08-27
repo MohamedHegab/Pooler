@@ -24,8 +24,8 @@ production:
   adapter: mysql2
   encoding: utf8
   pool: 5
-  password: 654321
+  password: 
   socket: /var/run/mysqld/mysqld.sock
   database: pooler_production
-  username: pooler
-  password: <%= ENV['secret_key_base'] %>
+  username: root
+  password: 654321

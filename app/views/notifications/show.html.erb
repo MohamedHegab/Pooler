@@ -1,12 +1,20 @@
 <p id="notice"><%= notice %></p>
-
+<div class="show_noti">
 <h1><%= @notification.source %> to <%= @notification.destination %> Trip</h1>
 
 <p>There’s enough requests to process a new trip from
-<%= @notification.source %> to: <%= @notification.destination %> Please, confirm with: your Name and Telephone<p>
+<%= @notification.source %> to: <%= @notification.destination %> Please, confirm with: </p>
+<p>your Name and Telephone</p>
 
-<%= render 'form' %>
+<% @notification.requests.each do |req| %>
+	<div class="field">
+		<div class="name">
+			<%= req.Name  %>:<span class="tele" >
+			<%= req.Telephone %>
+		</span>
+		</div>
+	</div>
+<% end %>
 
-
-<%= link_to 'Edit', edit_notification_path(@notification) %> |
 <%= link_to 'Back', notifications_path %>
+</div>

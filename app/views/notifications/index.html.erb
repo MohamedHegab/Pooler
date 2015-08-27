@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Notifications</h1>
+<div class="jumbotron"><h1>Listing Notifications</h1></div>
 
 <% @notifications.each do |notification| %>
 	<%= link_to(notification) do %>
 	  <h3> New <%= notification.source %> to <%= notification.destination %> Trip</h3>
-	  <%= link_to 'Delete', notification, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<% end %>
 <% end %>
 
 <br>
-<%= link_to 'Back to Requests', requests_path %>
+<%= link_to 'Go to Requests', requests_path %>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Requests</h1>
+<div class="jumbotron"><h1>Listing Requests</h1></div>
 
 <table>
   <thead>
@@ -29,8 +29,8 @@
         <td><%= request.Location_From %></td>
         <td><%= request.Location_Destination %></td>
         <td><%= request.Travel_date %></td>
-        <td><%= request.prefered_time_from %></td>
-        <td><%= request.prefered_time_to %></td>
+        <td><%= request.prefered_time_from.strftime('%H:%M:%S') %></td>
+        <td><%= request.prefered_time_to.strftime('%H:%M:%S') %></td>
         <td><%= request.Notes %></td>
         <td><%= request.zone %></td>
         <td><%= link_to 'Show', request %></td>
@@ -45,4 +45,4 @@
 
 <%= link_to 'New Request', new_request_path %>
 <br>
-<%= link_to 'Back to Notifications', notifications_path %>
+<%= link_to 'Go to Notifications', notifications_path %>
