@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <div class="jumbotron"><h1>Listing Notifications</h1></div>
-
+<div class="link">
 <% @notifications.each do |notification| %>
 	<%= link_to(notification) do %>
 	  <h3> New <%= notification.source %> to <%= notification.destination %> Trip</h3>
 	<% end %>
 <% end %>
-
+</div>
 <br>
 <%= link_to 'Go to Requests', requests_path %>
