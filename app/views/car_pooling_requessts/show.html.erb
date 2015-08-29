@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @car_pooling_requesst.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @car_pooling_requesst.password %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @car_pooling_requesst.user_id %>
+</p>
+
+<p>
+  <strong>Travel:</strong>
+  <%= @car_pooling_requesst.travel_id %>
+</p>
+
+<p>
+  <strong>Prefer from:</strong>
+  <%= @car_pooling_requesst.prefer_from %>
+</p>
+
+<p>
+  <strong>Prefer to:</strong>
+  <%= @car_pooling_requesst.prefer_to %>
+</p>
+
+<%= link_to 'Edit', edit_car_pooling_requesst_path(@car_pooling_requesst) %> |
+<%= link_to 'Back', car_pooling_requessts_path %>

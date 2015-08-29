@@ -1,0 +1,41 @@
+<%= form_for(@car_pooling_requesst) do |f| %>
+  <% if @car_pooling_requesst.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car_pooling_requesst.errors.count, "error") %> prohibited this car_pooling_requesst from being saved:</h2>
+
+      <ul>
+      <% @car_pooling_requesst.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :travel_id %><br>
+    <%= f.number_field :travel_id %>
+  </div>
+  <div class="field">
+    <%= f.label :prefer_from %><br>
+    <%= f.text_field :prefer_from %>
+  </div>
+  <div class="field">
+    <%= f.label :prefer_to %><br>
+    <%= f.text_field :prefer_to %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

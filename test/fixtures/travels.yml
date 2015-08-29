@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  source_city_id: 1
+  dest_city_id: 1
+  cost: MyString
+  distance: MyString
+  duration: MyString
+
+two:
+  Name: MyString
+  source_city_id: 1
+  dest_city_id: 1
+  cost: MyString
+  distance: MyString
+  duration: MyString
